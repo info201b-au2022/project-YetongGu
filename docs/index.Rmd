@@ -1,12 +1,12 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: "Digging Deeper into Climate Change"
+author: "Leah Sishu, Yetong Gu, Simon Xiong, Maggie Liang"
+date: "11/14/2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## What is this file for?
@@ -15,40 +15,63 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Please see Canvas for more details.
 
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
+## "Dynamic" paragraph
+
+The main purpose of this project is to educate people on what climate change is and how it is impacting the world. Our group has decided to focus on six major countries: China, Brazil, South Africa, Australia, the United Kingdom, and the United States. Exploring each of these countries will demonstrate a broad comprehension of what climate change is like in each continent, and how it may or may not be directly impacting each country/continent individually, or as a whole. We decided to measure climate change factors by collecting data on Carbon Dioxide Emissions and the temperature of the Earth’s surface. From our data set, we can see that the country with the average temperatures for each country was collected most recently, in 2013. The average temperature for each country is averaged at 22°C. This is fairly high considering the drastic increase in temperatures compared to earlier collected years. Another set of data that we can look at is the data set on Carbon dioxide (CO2) emissions. The data set not only shows that the United States is the leading country with the most CO2 emission usage. Though the United States has the most progressive and most consumption of CO2 emissions, countries like the United Kingdom and China are very close in consumption. Whereas Brazil, has the least amount of CO2 emissions usage. Within that same dataset, we can also see that over the years, each country progressively increases their CO2 emissions consumption. From our dataset, we found that in 1934, China had the highest average temperature at 31.23°C. In 2005, Brazil had the highest average temperature at 29.86°C. In 1761, the United States had the highest average temperature at 29.14°C. In 1987, South Africa had the highest average temperature at 25.11°C. Whereas in 1908, Australia had the highest average temperature at 23.13°C. Climate change impacts each and every one of us because it is not only detrimental to our environments, but could be a key contributor to health risks and complications. Climate change fluctuates between each country and could overall drastically affect our whole world. Collecting data on climate change can help us reduce the risk factors of climate change, and possibly reverse the effects.
+
+```{r B2, warning=FALSE, echo = F}
+source("B2.R")
 ```
 
-### Example 2: Initialize a variable and then use it
-```{r}
+## Tables
+
+### Table 1
+
+Table 1 contains Brazil, China, US, UK, Australia and South Africa mean temperature and mean Uncertainty in each year from 1832 to 2013, using Celsius degree
+
+```{r chart 1, echo = F}
 # Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+source("B3.R")
+chart1
 ```
 
-> `r msg` Hope you have a good day!! 
+### Table 2
 
-## ABOUT THIS FILE: 
+Table 2 contains Brazil, China, US, UK, Australia and South Africa co2 emission by kiloton
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r chart 2, warning=FALSE, echo = F}
+source("B3.R")
+chart2
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+
+## Three charts
+
+### Chart 1
+
+This graph shows the world's average temperature from the year 1750 to 2013. The purpose of this graph is to show the temperature change over the year to answer the question is global warming happening? The result of the graph does show the temperature around the world is rising now.
+
+```{r B4, warning=FALSE, echo = F}
+source("B4.R")
+plot1
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Chart 2
+
+This is the graph that shows the six main countries that we picked from each continents' Co2 emission from each year. We use this graph to show the total Co2 emission from each year because later we want to compare the Co2 emission of each country to each year's temperature.
+
+```{r B5, warning=FALSE,  echo = F}
+source("B5.R")
+plot2
+```
+ 
+### Chart 3
+
+This is a line graph that shows the relationship between Co2 emission and world average temperature. We have this graph because one of our research questions is to find out does the amount of Co2 emission has a relation with temperature change. The result does show at some point temperature and Co2 emission has a positive relationship.
+
+```{r B6, warning=FALSE, echo = F}
+source("B6.R")
+plot3
+```
