@@ -1,7 +1,7 @@
 library(tidyverse)
 
-temperature <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-YetongGu/main/data/GlobalLandTemperaturesByMajorCity.csv")
-co2 <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-YetongGu/main/data/historical_emissions.csv")
+temperature <- read.csv("data/GlobalLandTemperaturesByMajorCity.csv")
+co2 <- read.csv("data/historical_emissions.csv")
 
 temperature <- mutate(temperature, dt = substr(dt, 1, 4)) %>%
     select(c(dt, AverageTemperature, Country)) %>%

@@ -11,8 +11,8 @@ library('stringr')
 library('ggplot2')
 library('reshape2')
 
-temperature <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-YetongGu/main/data/GlobalLandTemperaturesByMajorCity.csv")
-co2 <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-YetongGu/main/data/historical_emissions.csv")
+temp <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-YetongGu/main/data/GlobalLandTemperaturesByMajorCity.csv", stringsAsFactors = FALSE)
+co2 <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-YetongGu/main/data/historical_emissions.csv", stringsAsFactors = FALSE)
 
 
 main_countries<- c("China", "United States", "Australia", "United Kingdom", "Brazil", "South Africa")
@@ -33,4 +33,3 @@ plot2 <- ggplot(co2_reshape, aes(x = Country, y = value, fill = variable)) +
   geom_col(position = "stack") +
   ggtitle("Six main country Co2 emissions from 1990 to 2018",
     subtitle = "China, United States, Australia, United Kingdom, Brazil, South Africa") 
-
